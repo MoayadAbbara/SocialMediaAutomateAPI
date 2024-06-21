@@ -80,7 +80,7 @@ def FacebookPost():
     image_url = data['images']
     if image_url : 
         images_paths = ImageServices.download_the_images(image_url)
-    FacebookTest.Post_On_Facebook(text , images_paths)
+    FacebookPost.Post_On_Facebook(text , images_paths)
     #TwitterServices.post_on_twitter(text , media_ids)
     ImageServices.delete_the_images(images_paths)
     return jsonify({'message': 'Image posted to Facebook successfully.'}), 200

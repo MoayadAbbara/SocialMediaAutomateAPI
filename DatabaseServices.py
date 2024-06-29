@@ -35,7 +35,6 @@ def addNewAnnouncements(LastFiveAnnouncements):
                 # Delete the latest announcement from the database
                 cursor.execute('DELETE FROM announcement WHERE id = %s', (latest_announcement[0],))
                 connection.commit()
-                print({"message": "Latest announcement deleted as it was removed from the original site"})
                 return
 
             # Check if there are any new announcements

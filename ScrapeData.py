@@ -17,7 +17,6 @@ def LastFiveAnnouncements():
         for card in cards[:5]:  # Loop through only the first 5 cards found
             title = card.find("h6", class_="card-title").a.get_text()
             link = consts.BSEU + card.find("h6", class_="card-title").a["href"]
-
             if card.find("img", class_="card-img-top"):
                 image = consts.BSEU + card.find("img", class_="card-img-top")["src"]
             else:
